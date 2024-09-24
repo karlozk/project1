@@ -554,9 +554,9 @@ nav ul li a {
   background-position: 75% 4%;
   background-repeat: no-repeat;
   color: rgb(2, 2, 17);
-  text-align: left;
+  text-align: right;
   padding: 100px 20px;
-  font-size:10px;
+  font-size:2px;
   min-height: 55vh;
   display: flex;
   justify-content: right;
