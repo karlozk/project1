@@ -523,9 +523,9 @@ form {
 #google:hover {
   opacity: 0.7;
 }
-@media(max-width:968px){
+@media(max-width:1000px){
  html,body {
-  /* overflow: hidden; */
+  overflow: hidden;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -548,7 +548,8 @@ nav ul li a {
 }
 }
 .intro-container {
-  background-image: url('newimg.jpg');
+  background-image: none;
+  background-color: rgb(184, 206, 227);
   background-size: cover;
   background-position: 75% 4%;
   background-repeat: no-repeat;
@@ -559,6 +560,55 @@ nav ul li a {
   display: flex;
   justify-content: right;
   align-items: top;
+}
+form {
+  display: flex;
+  height: auto;
+  margin: 25px;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+  font-family: 'lato', sans-serif;
+}
+#email {
+  width: 150px;
+  height: 5px;
+  padding: 10px;
+}
+
+#Mobile {
+  width: 150px;
+  height: 5px;
+  padding: 10px;
+}
+.main-faq {
+  display: flex;
+  font-family: 'lato', sans-serif;
+  display: flex;
+  background-color: #dfedf8;
+  
+  height: 562px;
+}
+.faq {
+  align-self: flex-end;
+  width: 40%;
+  height: 350px;
+  background-color: #e6eff7;
+  border-right: 1px solid #8c8080;
+  padding: 40px;
+  
+  height: 471px;
+}
+.answer {
+  display: none;
+  align-self: flex-end;
+  color: rgb(13, 13, 14);
+  /* background-color: rgba(240, 224, 243, 0.934); */
+  background-color: #d1e8f5;
+  width: 45%;
+  height: 480px;
+  padding: 40px;
+  overflow-y: auto;
 }
 }
 
