@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('pinksky.JPG') no-repeat center center fixed;
+    /* background-size: cover; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-attachment: fixed;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    width: 900px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: flex;
+    text-align: center; 
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.forgot-password-form {
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.forgot-password-form h2 {
+    margin-bottom: 20px;
+}
+
+.form-container p {
+    margin-bottom: 20px;
+}
+
+.forgot-password-form input {
+    width: 92%;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+}
+
+.forgot-password-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.forgot-password-form button:hover {
+    background-color: #0056b3;
+}
+
+#message {
+    margin-top: 10px;
+    color: red;
+}

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker Profile</title>
+    
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    color: #007BFF;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.profilepic button{
+    background-color: rgb(67, 94, 125);
+    width: 10vw;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Fitness Tracker Profile</h1>
+        <form>
+            <!-- Basic Information -->
+            <section>
+                <h2>Basic Information</h2>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="height">Height:</label>
+                <input type="number" id="height" name="height" placeholder="cm" required>
+
+                <label for="weight">Weight:</label>
+                <input type="number" id="weight" name="weight" placeholder="kg" required>
+
+                <label for="targetWeight">Target Weight:</label>
+                <input type="number" id="targetWeight" name="targetWeight" placeholder="kg">
+            </section>
+
+            <!-- Fitness Goals -->
+            <section>
+                <h2>Fitness Goals</h2>
+                <label for="primaryGoal">Primary Fitness Goal:</label>
+                <select id="primaryGoal" name="primaryGoal" required>
+                    <option value="">Select</option>
+                    <option value="loseWeight">Lose Weight</option>
+                    <option value="gainMuscle">Gain Muscle</option>
+                    <option value="maintainFitness">Maintain Fitness</option>
+                    <option value="improveEndurance">Improve Endurance</option>
+                </select>
+
+                <label for="secondaryGoals">Secondary Goals:</label>
+                <input type="text" id="secondaryGoals" name="secondaryGoals" placeholder="e.g., improve flexibility">
+
+                <label for="activityLevel">Activity Level:</label>
+                <select id="activityLevel" name="activityLevel" required>
+                    <option value="">Select</option>
+                    <option value="sedentary">Sedentary</option>
+                    <option value="lightlyActive">Lightly Active</option>
+                    <option value="moderatelyActive">Moderately Active</option>
+                    <option value="veryActive">Very Active</option>
+                </select>
+
+                <label for="stepGoal">Daily Step Goal:</label>
+                <input type="number" id="stepGoal" name="stepGoal" placeholder="e.g., 10000">
+            </section>
+
+            <!-- Health Information -->
+            <section>
+                <h2>Health Information</h2>
+                <label for="healthConditions">Health Conditions:</label>
+                <input type="text" id="healthConditions" name="healthConditions" placeholder="e.g., diabetes, joint pain">
+
+                <label for="dietaryPreferences">Dietary Preferences:</label>
+                <input type="text" id="dietaryPreferences" name="dietaryPreferences" placeholder="e.g., vegetarian, gluten-free">
+
+                <label for="allergies">Allergies:</label>
+                <input type="text" id="allergies" name="allergies" placeholder="e.g., nuts, lactose">
+
+                <label for="medications">Medications:</label>
+                <input type="text" id="medications" name="medications" placeholder="e.g., blood pressure meds">
+            </section>
+
+            <!-- Exercise Preferences -->
+            <section>
+                <h2>Exercise Preferences</h2>
+                <label for="workoutTypes">Preferred Workout Types:</label>
+                <input type="text" id="workoutTypes" name="workoutTypes" placeholder="e.g., cardio, yoga">
+
+                <label for="workoutTime">Preferred Workout Time:</label>
+                <select id="workoutTime" name="workoutTime">
+                    <option value="">Select</option>
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                </select>
+
+                <label for="workoutFrequency">Workout Frequency:</label>
+                <input type="number" id="workoutFrequency" name="workoutFrequency" placeholder="days per week">
+
+                <label for="workoutLocation">Home or Gym:</label>
+                <select id="workoutLocation" name="workoutLocation">
+                    <option value="">Select</option>
+                    <option value="home">Home</option>
+                    <option value="gym">Gym</option>
+                </select>
+
+                <label for="equipment">Equipment Availability:</label>
+                <input type="text" id="equipment" name="equipment" placeholder="e.g., dumbbells, treadmill">
+            </section>
+
+            <!-- Lifestyle Habits -->
+            <section>
+                <h2>Lifestyle Habits</h2>
+                <label for="sleep">Sleep Patterns:</label>
+                <input type="number" id="sleep" name="sleep" placeholder="hours per night">
+
+                <label for="hydration">Hydration:</label>
+                <input type="number" id="hydration" name="hydration" placeholder="glasses or liters per day">
+
+                <label for="stress">Stress Levels:</label>
+                <input type="number" id="stress" name="stress" placeholder="1 to 10">
+
+                <label for="smoking">Smoking:</label>
+                <select id="smoking" name="smoking">
+                    <option value="">Select</option>
+                    <option value="no">No</option>
+                    <option value="occasionally">Occasionally</option>
+                    <option value="regularly">Regularly</option>
+                </select>
+            </section>
+
+            <!-- Notifications and Reminders -->
+            <section>
+                <h2>Notifications and Reminders</h2>
+                <label for="motivationalMessages">Motivational Messages:</label>
+                <select id="motivationalMessages" name="motivationalMessages">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="workoutReminders">Workout Reminders:</label>
+                <select id="workoutReminders" name="workoutReminders">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="progressUpdates">Goal Progress Updates:</label>
+                <select id="progressUpdates" name="progressUpdates">
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                </select>
+            </section>
+
+            <!-- Social and Sharing Preferences -->
+            <!-- <section>
+                <h2>Social and Sharing Preferences</h2>
+                <label for="connectFriends">Connect with Friends:</label>
+                <select id="connectFriends" name="connectFriends">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="socialSharing">Social Media Sharing:</label>
+                <select id="socialSharing" name="socialSharing">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="privacySettings">Privacy Settings:</label>
+                <select id="privacySettings" name="privacySettings">
+                    <option value="private">Private</option>
+                    <option value="friendsOnly">Friends Only</option>
+                    <option value="public">Public</option>
+                </select>
+            </section> -->
+
+            <!-- Customization -->
+            <!-- <section>
+                <h2>Customization</h2>
+                <label for="appTheme">App Theme:</label>
+                <select id="appTheme" name="appTheme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+
+                <label for="personalizedRecommendations">Personalized Recommendations:</label>
+                <select id="personalizedRecommendations" name="personalizedRecommendations">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select> -->
+            </section>
+            <section class="profilepic"><div class="profile-container">
+                <h2>Profile Picture</h2>
+                
+                <!-- Profile Picture Display -->
+                <div class="profile-pic">
+                    <img id="profile-img" src="profilepic.avif" width="200px" height="200px">
+                </div>
+                
+                <!-- Upload Profile Picture Form -->
+                <form id="upload-form" enctype="multipart/form-data">
+                    <label for="profile-pic-upload">Upload Profile Picture:</label>
+                    <input type="file" id="profile-pic-upload" name="profilePic" accept="image/*" required>
+        
+                    <button type="submit">Upload Picture</button>
+                </form>
+            </div>
+        
+            <!-- <script src="scripts.js"></script> -->
+            <script>
+                document.getElementById('profile-pic-upload').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+        
+            reader.onload = function (e) {
+                // Preview the selected image
+                document.getElementById('profile-img').src = e.target.result;
+            };
+        
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        // Handle the form submission
+        document.getElementById('upload-form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            
+            const formData = new FormData();
+            const fileInput = document.getElementById('profile-pic-upload');
+            formData.append('profilePic', fileInput.files[0]);
+        
+            try {
+                const response = await fetch('/upload-profile-pic', {
+                    method: 'POST',
+                    body: formData,
+                });
+        
+                const result = await response.json();
+                alert(result.message);
+            } catch (error) {
+                console.error('Error uploading profile picture:', error);
+                alert('Failed to upload profile picture.');
+            }
+        });
+            </script></section>
+           <a href="dashboard.html">
+            <button type="submit">Save Profile</button></a>
+        </form>
+    </div>
+</body>
+</html>

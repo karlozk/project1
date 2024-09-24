@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="forgot.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="fg1.jpg" alt="Background Image">
+        </div>
+        <div class="forgot-password-form">
+            <h2>Forgot Password</h2>
+            <p>Please enter your email to receive an OTP.</p>
+            <form id="otpForm">
+                <input type="email" id="email" placeholder="Email" required>
+                <button type="button" onclick="sendOTP()">Send OTP</button>
+            </form>
+            <div id="otpSection" style="display:none;">
+                <p>Enter the OTP sent to your email:</p>
+                <input type="text" id="otpInput" placeholder="OTP">
+                <button type="button" onclick="verifyOTP()">Verify OTP</button>
+            </div>
+            <p id="message"></p>
+        </div>
+    </div>
+    <script src="forgot.js"></script>
+</body>
+</html>

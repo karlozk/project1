@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- <link rel="stylesheet" href="login.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0; 
+}
+body{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('login.png');
+    background-color: #bfd5df;
+    background-position: center;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.wraper{
+    display: flex;
+    border: 0cap;
+    width: 300px;
+    background-color: transparent;
+    padding: 30px 40px;
+    backdrop-filter: blur(15px);
+    color: rgb(8, 0, 0);
+    position: relative;
+    left: 250px;
+    border: 5px solid black;
+    justify-content: center;
+    align-items: center;  
+    flex-direction: column; 
+    border-bottom: 30px solid black;
+    border-radius: 10px;
+}
+
+.wraper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.wraper .inputbox{
+    width: 100%;
+    height: 30px;
+    margin: 30px 0;
+}
+#uname {
+    position: absolute;
+    top: 32.60%;
+    left: 280px; 
+    color: rgb(5, 0, 0);
+    font-size: 18px; 
+}
+#lock {
+    position: absolute;
+    top: 52%;
+    left: 280px;
+    transform: translateY(-50%);
+    color: rgb(5, 0, 0);
+    font-size: 18px; 
+}
+.inputbox input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: 3px solid rgb(5, 0, 0);
+    border-radius: 7px;
+    color: #0f0000;
+    font-size: 16px;
+    padding-left: 10px;    
+}
+.inputbox input::placeholder{
+    color: #110101;
+   
+}
+.fr a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+#signin
+{   display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 1.5em;
+    font-weight: 400;
+     margin: 10px auto; 
+    cursor: pointer;
+    transition: all 0.5s;
+    text-align: center;   
+    text-decoration: none;
+    text-align: center;
+}
+.login a{
+    text-decoration: none;
+}
+#signin:hover
+{
+    background:#0068cf;
+    
+}
+
+.forgot a:hover
+{
+    font-style: italic;
+    cursor: pointer;
+    
+    transition: all 0.5s;
+}
+/* .register a:hover
+{
+    font-style: italic;
+    cursor: pointer;
+    transition: all 0.5s;
+} */
+
+</style>
+<body>
+    <div class="wraper">
+        <form action="">
+            <h1>Welcome</h1>
+            <div class="inputbox">
+                <i class="fas fa-user" id="uname"></i>
+                <input type="text" id=username name="username" placeholder="  username" required>
+            </div>
+            <div class="inputbox">
+                <i class="fas fa-lock" id="lock"></i>
+                <input type="password" id="password" name="password" placeholder="  password" required>
+            </div>  
+            <div class="rm">
+                <p><input type="checkbox">Remember Me</p>
+            </div>
+            <!-- <div class="forgot">
+                <p id="checkbox"><input type="checkbox">Remember Me</p>   
+                <p id="forgot"><a href="#">Forgot Password</a></p>
+
+            </div> -->
+            <div class="login">
+                <a href="dashboard.html">
+                    <input class="styled" type="button" id="signin" value="Login">
+                </a>
+            </div>
+            <div class="fr">
+                <p id="forgot"><a href="forgot.html">Forgot Password?</a></p>
+            </div>
+            <div class="signup">
+                <p id="sign">Not a user?
+                <a href="signup.html">signup </a>
+            </p>
+            </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

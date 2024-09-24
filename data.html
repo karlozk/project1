@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Tracker Dashboard</title>
+</head>
+<style>
+    /* General Form Styles */
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input, form select, form button {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    width: 10vw;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    color: #0992ee;
+    font-size: 24px;
+}
+h1{
+    color:#0056b3;
+}
+
+</style>
+<body>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <h1>Health Tracker Dashboard</h1>
+            <ul>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#nutrition">Nutrition</a></li>
+                <li><a href="#sleep">Sleep</a></li>
+                <li><a href="#goals">Goals</a></li>
+            </ul>
+        </nav>
+
+        <!-- Activity Logging Form -->
+        <div id="log-activity" class="section">
+            <h2>Log Activity</h2>
+            <form id="activity-form">
+                <label for="activity-date">Date:</label>
+                <input type="date" id="activity-date" name="date" required>
+                
+                <label for="activity-type">Activity:</label>
+                <input type="text" id="activity-type" name="activity" required>
+
+                <label for="activity-duration">Duration (minutes):</label>
+                <input type="number" id="activity-duration" name="duration" required>
+
+                <!-- <label for="activity-calories">Calories Burned:</label>
+                <input type="number" id="activity-calories" name="calories" required> -->
+
+                <button type="submit">Submit Activity</button>
+            </form>
+        </div>
+
+        <!-- Nutrition Logging Form -->
+        <div id="log-nutrition" class="section">
+            <h2>Log Nutrition</h2>
+            <form id="nutrition-form">
+                <label for="nutrition-date">Date:</label>
+                <input type="date" id="nutrition-date" name="date" required>
+
+                <label for="nutrition-meal">Meal:</label>
+                <input type="text" id="nutrition-meal" name="meal" required>
+
+                <!-- <label for="nutrition-calories">Calories:</label>
+                <input type="number" id="nutrition-calories" name="calories" required>
+
+                <label for="nutrition-proteins">Proteins (g):</label>
+                <input type="number" id="nutrition-proteins" name="proteins" required>
+
+                <label for="nutrition-carbs">Carbs (g):</label>
+                <input type="number" id="nutrition-carbs" name="carbs" required>
+
+                <label for="nutrition-fats">Fats (g):</label>
+                <input type="number" id="nutrition-fats" name="fats" required> -->
+
+                <button type="submit">Submit  Nutrition</button>
+            </form>
+        </div>
+
+        <!-- Sleep Logging Form -->
+        <div id="log-sleep" class="section">
+            <h2>Log Sleep</h2>
+            <form id="sleep-form">
+                <label for="sleep-date">Date:</label>
+                <input type="date" id="sleep-date" name="date" required>
+
+                <label for="sleep-duration">Sleep Duration (hours):</label>
+                <input type="number" id="sleep-duration" name="duration" required>
+
+                <!-- <label for="sleep-quality">Sleep Quality:</label> -->
+                <!-- <select id="sleep-quality" name="quality" required>
+                    <option value="Good">Good</option>
+                    <option value="Average">Average</option>
+                    <option value="Poor">Poor</option>
+                </select> -->
+
+                <button type="submit">Submit  Sleep</button>
+            </form>
+        </div>
+
+        <!-- Goal Setting Form -->
+        <div id="set-goals" class="section">
+            <h2>Set Goals</h2>
+            <form id="goals-form">
+                <label for="goal-steps">Daily Steps:</label>
+                <input type="number" id="goal-steps" name="steps" required>
+
+                <label for="goal-water">Water Intake (glasses):</label>
+                <input type="number" id="goal-water" name="water" required>
+
+                <label for="goal-weight">Weight Goal (kg):</label>
+                <input type="number" id="goal-weight" name="weight" required>
+
+                <button type="submit">Set Goals</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
