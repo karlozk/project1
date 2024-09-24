@@ -526,7 +526,7 @@ form {
 @media(max-width:900px){
  html,body {
   overflow: hidden;
-  overflow-x: hidden;
+  overflow-x: scroll;
   overflow-y: scroll;
 }
 nav{
