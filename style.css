@@ -525,7 +525,7 @@ form {
 }
 @media(max-width:900px){
  html,body {
-  overflow: hidden;
+  overflow: scroll;
   overflow-x: scroll;
   overflow-y: scroll;
 }
