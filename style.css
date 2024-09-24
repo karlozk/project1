@@ -523,7 +523,7 @@ form {
 #google:hover {
   opacity: 0.7;
 }
-@media(max-width:1000px){
+@media(max-width:1100px){
  html,body {
   overflow: hidden;
   overflow-x: hidden;
