@@ -10,13 +10,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <style>
-    *{
+ html,body{
+    width: 100%;
+    height: 100%;
     margin: 0;
-    padding: 0; 
-}
+    padding: 0;
+    overflow-x: hidden;
+} 
+
 body{
     display: flex;
-    align-content: center;
+    /* align-content: center; */
     align-items: center;
     height: 100vh;
     background-image: url('login.png');
@@ -26,53 +30,57 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+    position: relative;
 }
 .wraper{
     display: flex;
     border: 0cap;
-    width: 300px;
+    width: 25vw;
     background-color: transparent;
-    padding: 30px 40px;
+    padding: 1%;
     backdrop-filter: blur(15px);
     color: rgb(8, 0, 0);
     position: relative;
-    left: 250px;
+    margin-left: 10%;
     border: 5px solid black;
     justify-content: center;
     align-items: center;  
     flex-direction: column; 
-    border-bottom: 30px solid black;
-    border-radius: 10px;
+    border-bottom: 5vh solid black;
+    border-radius: 1vw;
+    position: relative;
+}
+#loginForm{
+    display: flex;
+    flex-direction: column;
+    width:90%;
+    height: 100%;
+    position: relative;
 }
 
 .wraper h1{
-    font-size: 36px;
+    font-size:2.5vw;
     text-align: center;
 }
-
-.wraper .inputbox{
+/* .wraper .inputbox{
+    display: flex;
+    position: relative;
     width: 100%;
-    height: 30px;
-    margin: 30px 0;
-}
-#uname {
-    position: absolute;
-    top: 32.60%;
-    left: 280px; 
+    height: 7vh;
+    margin: 3vw 0;
+    overflow: hidden;
+} */
+#uname{
     color: rgb(5, 0, 0);
-    font-size: 18px; 
+    font-size: 1.4vmax; 
 }
 #lock {
-    position: absolute;
-    top: 52%;
-    left: 280px;
-    transform: translateY(-50%);
     color: rgb(5, 0, 0);
-    font-size: 18px; 
+    font-size: 1.4vmax; 
 }
-.inputbox input{
+/* .inputbox input{
     width: 100%;
-    height: 100%;
+    height: 80%;
     background: transparent;
     outline: none;
     border: 3px solid rgb(5, 0, 0);
@@ -80,6 +88,33 @@ body{
     color: #0f0000;
     font-size: 16px;
     padding-left: 10px;    
+} */
+.inputbox {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    width: 100%;
+    margin: 0.5vh 0;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.inputbox input{
+    width: 15vw;
+    height: 5vh;
+    margin: 5% 0;
+    border: 0.2vw solid rgb(5, 0, 0);
+    border-radius: 0.5vw;
+}
+#box1{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#box2{
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 .inputbox input::placeholder{
     color: #110101;
@@ -89,14 +124,16 @@ body{
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
-
+p{
+    font-size: 1vw;
+}
 #signin
 {   display: flex;
-    width: 100%;
-    height: 40px;
+    width: 50%;
+    height: 20%;
     background-color: #007bff;
     color: white;
-    border-radius: 5px;
+    border-radius: 0.9vw;
     border: 2px solid black;
     font-size: 1.5em;
     font-weight: 400;
@@ -129,32 +166,129 @@ body{
     cursor: pointer;
     transition: all 0.5s;
 } */
+@media (max-width:600px) {
+    html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+} 
+body{
+    display: flex;
+    /* align-content: center; */
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('login.png');
+    background-color: #bfd5df;
+    background-position:70% 4%;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+}
+.wraper{
+    display: flex;
+    border: 0cap;
+    width: 55vw;
+    background-color: transparent;
+    padding: 1%;
+    backdrop-filter: blur(15px);
+    color: rgb(8, 0, 0);
+    position: relative;
+    margin-left: 7%;
+    margin-bottom: 40%;
+    border: 5px solid black;
+    justify-content: center;
+    align-items: center;  
+    flex-direction: column; 
+    border-bottom: 3vh solid black;
+    border-radius: 1vw;
+    position: relative;
+}
+.inputbox {
+    display: flex;
+    flex-direction: column;
+    height: 13vh;
+    width: 100%;
+    margin: 0.5vh 0;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.inputbox input{
+    width: 35vw;
+    height: 3vh;
+    margin: 2% 0;
+    border: 0.2vw solid rgb(5, 0, 0);
+    border-radius: 1vw;
+}
+#box2{
+    margin-top: 15%;
+}
+p{
+    font-size: 3.5vw;
+}
+.wraper h1{
+    font-size:6.5vw;
+    text-align: center;
+}
+#signin
+{   display: flex;
+    width: 50%;
+    height: 20%;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0.9vw;
+    border: 2px solid black;
+    font-size: 1.2em;
+    font-weight: 300;
+     margin: 10px auto; 
+    cursor: pointer;
+    transition: all 0.5s;
+    text-align: center;   
+    text-decoration: none;
+    text-align: center;
+}
 
+}
 </style>
 <body>
     <div class="wraper">
-        <form action="">
-            <h1>Welcome</h1>
-            <div class="inputbox">
-                <i class="fas fa-user" id="uname"></i>
+        <form id="loginForm">
+             <h1>Welcome</h1>
+             <!-- <div class="inputbox" id="box1">
                 <input type="text" id=username name="username" placeholder="  username" required>
-            </div>
-            <div class="inputbox">
+                <i class="fas fa-user" id="uname"></i> 
+             </div>
+              <div class="inputbox" id="box1">
                 <i class="fas fa-lock" id="lock"></i>
                 <input type="password" id="password" name="password" placeholder="  password" required>
-            </div>  
-            <div class="rm">
+             </div> -->
+             <div class="inputbox">
+                <div class="box1">
+                    <input type="text" id=username name="username" placeholder="  username" required>
+                <i class="fas fa-user" id="uname"></i>
+                </div>
+                <div class="box2">
+                    <input type="password" id="password" name="password" placeholder="  password" required>
+                    <i class="fas fa-lock" id="lock"></i>
+                </div>
+             </div>
+
+             <div class="rm">
                 <p><input type="checkbox">Remember Me</p>
-            </div>
-            <!-- <div class="forgot">
+             </div>
+             <!-- <div class="forgot">
                 <p id="checkbox"><input type="checkbox">Remember Me</p>   
                 <p id="forgot"><a href="#">Forgot Password</a></p>
-
-            </div> -->
-            <div class="login">
-                <a href="dashboard.html">
-                    <input class="styled" type="button" id="signin" value="Login">
-                </a>
+             </div> -->
+             <div class="login">
+                
+                    <input class="styled" type="submit" id="signin" value="Login">
+                
             </div>
             <div class="fr">
                 <p id="forgot"><a href="forgot.html">Forgot Password?</a></p>
@@ -167,5 +301,6 @@ body{
             </div>
         </form>
     </div>
+    <script src="login1.js"></script>
 </body>
 </html>
