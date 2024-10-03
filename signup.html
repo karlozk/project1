@@ -79,18 +79,19 @@
     <div class="signup-container">
 
         <h1>Create Your Account</h1>
-        <form action="submit-signup" method="POST">
+        <form id="signupForm">
+
             <label for="firstname">First Name</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="firstname" name="name" required>
 
             <label for="lastname">Last Name</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="lastname" name="name" required>
 
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
 
             <label for="userid">User ID</label>
-            <input type="userid" id="userid" name="userid" required>
+            <input type="text" id="userid" name="userid" required>
 
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
@@ -100,12 +101,15 @@
           <!-- <a href="profile.html">
             <button type="submit" >Sign Up</button></a> -->
         
-            <a href="profile.html">
+            <!-- <a href="profile.html">
                 <input class="styled" type="button" id="signup" value="signup">
-            </a>
+            </a> -->
+            <input class="styled" type="submit" id="signup" value="Sign Up">
 
         </form>
         <p>Already have an account? <a href="login.html">Log In</a></p>
+        
     </div>
+    <script src="signup.js"></script>
 </body>
 </html>
